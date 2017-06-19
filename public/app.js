@@ -6,13 +6,13 @@ createCatUl = function() {
 
 createName = function(name) {
   var nameLi = document.createElement('li');
-  nameLi.innerText = name;
+  nameLi.innerText = "Name: " + name;
   return nameLi;
 }
 
 createFood = function(food) {
   var foodLi = document.createElement('li');
-  foodLi.innerText = food;
+  foodLi.innerText = "Favourite food: " + food;
   return foodLi;
 }
 
@@ -29,7 +29,6 @@ appendElements = function(catList, catUl, name, food, img) {
   catList.appendChild(catUl);
 }
 
-
 var addCat = function(name, food, imgUrl) {
   var catList = document.querySelector('#cats')
   var catUl = createCatUl();
@@ -37,15 +36,14 @@ var addCat = function(name, food, imgUrl) {
   var food = createFood(food);
   var img = createImg(imgUrl);
 
-  
   appendElements(catList, catUl, name, food, img);
 }
 
 var app = function() {
-  addCat("Name: Lola", "Favourite food: Salmon", "http://londonbeep.com/wp-content/uploads/2015/04/lazy-cat-tries-to-help-9.jpg");
-  addCat("Name: Boba", "Favourite food: Sock fluff", "http://66.media.tumblr.com/d1f01bbe0150fda0c40d2151c5eaeac8/tumblr_odlqqskjj61v9cejwo1_400.jpg");
-  addCat("Name: Barnaby", "Favourite food: Tuna", "https://68.media.tumblr.com/88d0fcf2b84a7b098dda839130597569/tumblr_okuo4teiql1uhevdso1_1280.jpg");
-  addCat("Name: Max", "Favourite food: Whiskas Temptations", "http://66.media.tumblr.com/7c5784ea89369c780e782bf10c60315a/tumblr_npb0hlYwhV1u63jaco1_1280.jpg");
+  addCat("Lola", "Salmon", "http://londonbeep.com/wp-content/uploads/2015/04/lazy-cat-tries-to-help-9.jpg");
+  addCat("Boba", "Sock fluff", "http://66.media.tumblr.com/d1f01bbe0150fda0c40d2151c5eaeac8/tumblr_odlqqskjj61v9cejwo1_400.jpg");
+  addCat("Barnaby", "Tuna", "https://68.media.tumblr.com/88d0fcf2b84a7b098dda839130597569/tumblr_okuo4teiql1uhevdso1_1280.jpg");
+  addCat("Max", "Whiskas Temptations", "http://66.media.tumblr.com/7c5784ea89369c780e782bf10c60315a/tumblr_npb0hlYwhV1u63jaco1_1280.jpg");
 }
 
 // var app = function() {
@@ -73,9 +71,4 @@ var app = function() {
 //   catList.appendChild(catUl);
 // }
 
-
 window.onload = app;
-
-
-// 3. EXTENSION: Remove the cat data in the HTML and add them via your javascript. If you want to be fancy, put the cat data into an array.
-// 4. EXTENSION: Style the site!
